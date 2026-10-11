@@ -51,3 +51,55 @@ nav > a {
     border-radius: 6px;
 }
 
+#apresentacao {
+    text-align: center;
+    margin: 20px;
+}
+
+#programacao > h2 {
+    background-color: rgb(27, 128, 190);
+    border: 1px solid rgb(27, 128, 190);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 0;
+    color: white;
+    text-align: center;
+    
+}
+
+#programacao > ul {
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+#programacao > article {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#programacao {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 15px;
+    background-color: white;
+    color:#0b2c74;
+}
+
+.cards-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color:  var(--cor-cards);
+    color: white;
+    border: 1px solid #2563EB;
+    border-radius: 10px;
+    padding: 20px;
+
+    flex: 1 1 280px;
+    min-width: 0;
+}
