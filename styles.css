@@ -87,10 +87,15 @@ nav > a {
     color:#0b2c74;
 }
 
+#projetos > h2 {
+    margin: 20px;
+}
+
 .cards-projetos {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    margin: 20px;
 }
 
 .card {
@@ -102,4 +107,28 @@ nav > a {
 
     flex: 1 1 280px;
     min-width: 0;
+}
+
+#resultados > h2 {
+    margin: 20px;
+}
+
+#podio {
+    text-align: center;
+}
+
+.cards-podio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.card-podio {
+    background-color: var(--cor-cards);
+    color: #F8FAFC;
+    border: 1px solid #2563EB;
+    border-radius: 10px;
+    padding: 60px;
 }
