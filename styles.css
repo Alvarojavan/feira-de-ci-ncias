@@ -98,6 +98,12 @@ nav > a {
     margin: 20px;
 }
 
+figure > img, figcaption {
+    max-width: 200px;
+    text-align: center;
+}
+
+
 .card {
     background-color:  var(--cor-cards);
     color: white;
