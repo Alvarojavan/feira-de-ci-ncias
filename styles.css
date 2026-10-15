@@ -157,4 +157,5 @@ figure > img, figcaption {
     border-radius: 10px;
     padding: 20px;
     background-color: var(--cor-cards);
+    margin: 20px;
 }
