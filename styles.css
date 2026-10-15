@@ -2,8 +2,9 @@
     --cor-fundo: #0F172A;
     --cor-header: #020B1F;
     --cor-cards: #1E293B;
+    --cor-cards-secundaria: #2563EB;
     --cor-texto: #F8FAFC;
-    --cor-texto-secundário: #94A3B8;
+    --cor-texto-secundario: #94A3B8;
 }
 
 * {
@@ -107,7 +108,7 @@ figure > img, figcaption {
 .card {
     background-color:  var(--cor-cards);
     color: white;
-    border: 1px solid #2563EB;
+    border: 1px solid var(--cor-cards-secundaria);
     border-radius: 10px;
     padding: 20px;
 
@@ -134,7 +135,26 @@ figure > img, figcaption {
 .card-podio {
     background-color: var(--cor-cards);
     color: #F8FAFC;
-    border: 1px solid #2563EB;
+    border: 1px solid var(--cor-cards-secundaria);
     border-radius: 10px;
     padding: 60px;
+}
+
+#avaliacao-dos-projetos > h3 {
+    margin: 20px;
+}
+
+.avaliacao-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.av-p {
+    border: 1px solid var(--cor-cards-secundaria);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--cor-cards);
 }
