@@ -10,12 +10,11 @@
 
 * {
     font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     font-size: 16px;
@@ -66,7 +65,6 @@ nav > a {
     margin: 0;
     color: white;
     text-align: center;
-    
 }
 
 #programacao > ul {
@@ -114,7 +112,6 @@ figure > img, figcaption {
     padding: 20px;
 
     flex: 1 1 280px;
-    min-width: 0;
 }
 
 #resultados > h2 {
