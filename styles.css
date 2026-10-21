@@ -5,6 +5,7 @@
     --cor-cards-secundaria: #2563EB;
     --cor-texto: #F8FAFC;
     --cor-texto-secundario: #94A3B8;
+    --cor-resultado-geral: #FACC15;
 }
 
 * {
@@ -139,5 +140,19 @@ figure > img, figcaption {
     border-radius: 10px;
     padding: 20px;
     background-color: var(--cor-cards);
+    margin: 20px;
+}
+
+#resultado-geral {
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    background-color: var(--cor-header);
+    border: 1px solid var(--cor-cards-secundaria);
+    border-radius: 10px;
+    padding: 20px;
     margin: 20px;
 }

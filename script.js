@@ -24,7 +24,7 @@ function calcularTotal(lista) {
     for(let indice = 0; indice < lista.length; indice++) {
         soma += lista[indice][2];
     };
-    return soma
+    return soma;
 };
 
 function calcularMedia(lista) {
@@ -34,9 +34,6 @@ function calcularMedia(lista) {
 for(let indice = 0; indice < projetos.length; indice++) {
     document.querySelector(`#${projetos[indice][0]}`).textContent = `Projeto: ${projetos[indice][1]}`;
     document.querySelector(`#pontuacao-${projetos[indice][0]}`).textContent = `Pontuação: ${projetos[indice][2]}`;
-}
-
-for(let indice = 0; indice < projetos.length; indice++) {
     document.querySelector(`#diagnostico-${projetos[indice][0]}`).textContent = `Resultado Geral: ${calcularDiagnostico(projetos[indice][2])}`;
 }
 
