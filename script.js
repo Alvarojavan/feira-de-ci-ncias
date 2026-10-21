@@ -35,16 +35,16 @@ for(let indice = 0; indice < projetos.length; indice++) {
     document.querySelector(`#${projetos[indice][0]}`).textContent = `Projeto: ${projetos[indice][1]}`;
     document.querySelector(`#pontuacao-${projetos[indice][0]}`).textContent = `Pontuação: ${projetos[indice][2]}`;
     document.querySelector(`#diagnostico-${projetos[indice][0]}`).textContent = `Resultado Geral: ${calcularDiagnostico(projetos[indice][2])}`;
-}
+};
 
-document.querySelector("#media").textContent = `Média das notas: ${calcularMedia(projetos)}`;
+document.querySelector("#total").textContent = `Total: ${calcularTotal(projetos)}`;
 
-document.querySelector("#total").textContent = `Total: ${calcularTotal(projetos)}`
+document.querySelector("#media").textContent = `Média das notas: ${calcularMedia(projetos).toFixed(2)}`;
 
-let nProjetosAcimaDaMedia = 0;
+let projetosAcimaDaMedia = 0;
 for(let indice = 0; indice < projetos.length; indice++) {
     if (projetos[indice][2] > calcularMedia(projetos)) {
-        nProjetosAcimaDaMedia += 1;
+        projetosAcimaDaMedia += 1;
     };
 };
-document.querySelector("#projetosAcimaDaMedia").textContent = `Número de projetos acima da média: ${nProjetosAcimaDaMedia}`;
+document.querySelector("#projetosAcimaDaMedia").textContent = `Número de projetos acima da média: ${projetosAcimaDaMedia}`;
