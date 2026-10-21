@@ -31,24 +31,6 @@ function calcularMedia(lista) {
     return calcularTotal(lista)/lista.length;
 };
 
-
-let projetosEmOrdemDeNota = [[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]];
-for(let a = 0; a < projetos.length; a++) {
-    for(let b = 0; b < projetos.length; b++) {
-        if (projetos[a][2] >= projetosEmOrdemDeNota[b][2]) {
-            for(let c = projetosEmOrdemDeNota.length-2-b; c > -1; c -= 1) {
-                projetosEmOrdemDeNota[b+c+1] = projetosEmOrdemDeNota[b+c];
-            }
-            projetosEmOrdemDeNota[b] = projetos[a];
-            break;
-        }
-    }
-}
-document.querySelector("#primeiroLugar").textContent = projetosEmOrdemDeNota[0][1];
-document.querySelector("#segundoLugar").textContent = projetosEmOrdemDeNota[1][1];
-document.querySelector("#terceiroLugar").textContent = projetosEmOrdemDeNota[2][1];
-console.log(projetosEmOrdemDeNota)
-
 for(let indice = 0; indice < projetos.length; indice++) {
     document.querySelector(`#${projetos[indice][0]}`).textContent = `Projeto: ${projetos[indice][1]}`;
     document.querySelector(`#pontuacao-${projetos[indice][0]}`).textContent = `Pontuação: ${projetos[indice][2]}`;
