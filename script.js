@@ -24,57 +24,27 @@ function calcularTotal(lista) {
     for(let indice = 0; indice < lista.length; indice++) {
         soma += lista[indice][2];
     };
-    return soma
+    return soma;
 };
 
 function calcularMedia(lista) {
     return calcularTotal(lista)/lista.length;
 };
 
-
-let primeiroLugar = [];
-let segundoLugar = [];
-let terceiroLugar = [];
-for(let indice = 0; indice < projetos.length; indice++) {
-    if (indice === 0) {
-        primeiroLugar = projetos[indice]; 
-        segundoLugar = projetos[indice];
-        terceiroLugar = projetos[indice];
-    } else {
-        if (projetos[indice][2] > primeiroLugar[2]) {
-            terceiroLugar = segundoLugar;
-            segundoLugar = primeiroLugar;
-            primeiroLugar = projetos[indice]; 
-        } else if (projetos[indice][2] > segundoLugar[2]) {
-            terceiroLugar = segundoLugar;
-            segundoLugar = projetos[indice];
-        } else if (projetos[indice][2] > terceiroLugar[2]) {
-            terceiroLugar = projetos[indice];
-        }
-    }
-};
-document.querySelector("#primeiroLugar").textContent = primeiroLugar[1]
-document.querySelector("#segundoLugar").textContent = segundoLugar[1]
-document.querySelector("#terceiroLugar").textContent = terceiroLugar[1]
-
-
 for(let indice = 0; indice < projetos.length; indice++) {
     document.querySelector(`#${projetos[indice][0]}`).textContent = `Projeto: ${projetos[indice][1]}`;
     document.querySelector(`#pontuacao-${projetos[indice][0]}`).textContent = `Pontuação: ${projetos[indice][2]}`;
-}
-
-for(let indice = 0; indice < projetos.length; indice++) {
     document.querySelector(`#diagnostico-${projetos[indice][0]}`).textContent = `Resultado Geral: ${calcularDiagnostico(projetos[indice][2])}`;
 };
 
-document.querySelector("#media").textContent = `Média das notas: ${calcularMedia(projetos)}`;
+document.querySelector("#total").textContent = `Total: ${calcularTotal(projetos)}`;
 
-document.querySelector("#total").textContent = `Total: ${calcularTotal(projetos)}`
+document.querySelector("#media").textContent = `Média das notas: ${calcularMedia(projetos).toFixed(2)}`;
 
-let nProjetosAcimaDaMedia = 0;
+let projetosAcimaDaMedia = 0;
 for(let indice = 0; indice < projetos.length; indice++) {
     if (projetos[indice][2] > calcularMedia(projetos)) {
-        nProjetosAcimaDaMedia += 1;
+        projetosAcimaDaMedia += 1;
     };
 };
-document.querySelector("#projetosAcimaDaMedia").textContent = `Número de projetos acima da média: ${nProjetosAcimaDaMedia}`;
+document.querySelector("#projetosAcimaDaMedia").textContent = `Número de projetos acima da média: ${projetosAcimaDaMedia}`;
