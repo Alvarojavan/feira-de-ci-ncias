@@ -3,7 +3,7 @@ const projetos = [
     ["projeto2","Robótica  Sustentável", 8.5],
     ["projeto3", "Filtro de Água", 6.0],
     ["projeto4", "Horta Inteligente", 4.5],
-    ["projeto5", "Reciclagem Eletrónica", 9.0],
+    ["projeto5", "Reciclagem Eletrônica", 9.0],
     ["projeto6", "Automação Residencial",  6.5]
 ];
 
